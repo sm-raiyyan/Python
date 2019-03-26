@@ -1,0 +1,43 @@
+row1 = int(input("Enter no of rows of mat 1: "))
+col1 = int(input("Enter no of columns of mat 1: ")) 
+row2 = int(input("Enter no of rows of mat 2: "))
+col2 = int(input("Enter no of columns of mat 2: ")) 
+l = []
+l1 = []
+l2 = []
+if col1 is not row2:
+    print("Matrix multiplication not possible")
+else:
+    print("Enter elements into matrix 1")
+    for i in range(0, row1):
+        for j in range(0, col1):
+            l.append(int(input()))
+        l1.append(l)    
+    l = []
+    print("Enter elements into matrix 2")
+    for i in range(0, row2):
+        for j in range(0, col2):
+            l.append(int(input()))
+        l2.append(l)
+    l = []
+    
+    b = []
+    for i in range(0, col1):
+        a = []
+        for j in range(0, row2):
+            res = 0
+            for k in range(0, row1):
+                res += l1[i][k]*l2[k][j]
+            a.append(res)
+        b.append(a)
+    print(b)
+    '''for i in range(0, row1):
+        for j in range(0, col1):
+            print(l1[i][j], end = "")
+        print()
+
+    for i in range(0, row2):
+        for j in range(0, col2):
+            print(l1[i][j], end = "")
+        print()'''
+    
