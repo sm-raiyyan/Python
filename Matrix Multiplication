@@ -1,10 +1,15 @@
+#taking the inputs for row and col of mat 1 and mat 2
 row1 = int(input("Enter no of rows of mat 1: "))
 col1 = int(input("Enter no of columns of mat 1: ")) 
 row2 = int(input("Enter no of rows of mat 2: "))
 col2 = int(input("Enter no of columns of mat 2: ")) 
+
+#initializing lists l, l1 and l2
 l = []
 l1 = []
 l2 = []
+
+#check if column of mat 1 is equal to row of mat 2
 if col1 is not row2:
     print("Matrix multiplication not possible")
 else:
@@ -12,32 +17,32 @@ else:
     for i in range(0, row1):
         for j in range(0, col1):
             l.append(int(input()))
+        #appending the inputs to the list1
         l1.append(l)    
-    l = []
+    #empty the list
+    l = [] 
     print("Enter elements into matrix 2")
     for i in range(0, row2):
         for j in range(0, col2):
             l.append(int(input()))
+        #appending the inputs to the list1    
         l2.append(l)
+    #empty the list
     l = []
-    
+    #initialize list b
     b = []
     for i in range(0, col1):
         a = []
         for j in range(0, row2):
+            #initializing a variable 'res' to 0
             res = 0
             for k in range(0, row1):
+                #calculating the value
                 res += l1[i][k]*l2[k][j]
+            #appending res to list a 
             a.append(res)
+        #appending list a to list b
         b.append(a)
+    #display the final result stored in list b
     print(b)
-    '''for i in range(0, row1):
-        for j in range(0, col1):
-            print(l1[i][j], end = "")
-        print()
-
-    for i in range(0, row2):
-        for j in range(0, col2):
-            print(l1[i][j], end = "")
-        print()'''
-    
+   
